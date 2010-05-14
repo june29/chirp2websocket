@@ -1,0 +1,5 @@
+= Twitter ChirpUserStreams => WebSocket
+
+Only 2 steps to try:
+ * ruby chirp2websocket.rb
+ * open view/chirp.html with Web browser

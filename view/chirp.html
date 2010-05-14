@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Tweets and Events</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script src="socket.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <p id="waiting">waiting data...</p>
+      <div id="tweets">
+      </div>
+      <div id="events">
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+      var pageTracker = _gat._getTracker("UA-1004482-1");
+      pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+  </body>
+</html>

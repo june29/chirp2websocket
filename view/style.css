@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  padding: 10px;
+  position: relative;
+}
+
+#tweets {
+  width: 49%;
+  background-color: #eff;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  -webkit-border-radius: 20px;
+}
+
+#events {
+  width: 49%;
+  background-color: #fef;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  -webkit-border-radius: 20px;
+}
+
+.tweet, .event {
+  margin: 10px;
+  padding: 5px;
+  background-color: #fff;
+  -webkit-border-radius: 10px;
+  position: relative;
+}
+
+.created_at {
+  font-size: 70%;
+  color: #666;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+.object {
+  font-size: 80%;
+}
+
+.object, .target {
+  text-align: right;
+}
+
+.source img, .target img {
+  vertical-align: middle;
+}
+
+.screen_name {
+  padding: 0 5px;
+}

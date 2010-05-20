@@ -1,5 +1,7 @@
 require "uri"
 require "rubygems"
+require "bundler"
+Bundler.setup
 require "eventmachine"
 require "em-websocket"
 require "yajl/http_stream"

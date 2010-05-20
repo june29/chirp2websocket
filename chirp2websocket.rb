@@ -6,6 +6,7 @@ require "eventmachine"
 require "em-websocket"
 require "yajl/http_stream"
 require "pit"
+require "sinatra/base"
 
 account = Pit.get("twitter", :require => {
                     "username" => "username",
@@ -15,6 +16,13 @@ account = Pit.get("twitter", :require => {
 uri = URI.parse("http://%s:%s@chirpstream.twitter.com/2b/user.json" % [account["username"], account["password"]])
 
 @channel = EM::Channel.new
+
+class ViewApp < Sinatra::Base
+  set :public, "./public"
+  get '/' do
+    send_file "view/chirp.html"
+  end
+end
 
 EventMachine::run {
   EventMachine::defer {
@@ -45,5 +53,10 @@ EventMachine::run {
 
       @channel.push Yajl::Encoder.encode(data);
     end
+  }
+
+  EventMachine::defer {
+    ViewApp.run!
+    EM.stop
   }
 }

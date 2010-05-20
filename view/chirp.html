@@ -2,8 +2,14 @@
   <head>
     <title>Tweets and Events</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-    <script src="socket.js"></script>
+    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="swf/swfobject.js"></script>
+    <script type="text/javascript" src="swf/FABridge.js"></script>
+    <script type="text/javascript" src="swf/web_socket.js"></script>
+    <script type="text/javascript">
+      WebSocket.__swfLocation = "swf/WebSocketMain.swf";
+    </script>
+    <script type="text/javascript" src="socket.js"></script>
   </head>
   <body>
     <div id="container">

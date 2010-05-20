@@ -3,7 +3,6 @@ require "rubygems"
 require "eventmachine"
 require "em-websocket"
 require "yajl/http_stream"
-require "json"
 require "pit"
 
 account = Pit.get("twitter", :require => {
@@ -42,7 +41,7 @@ EventMachine::run {
     Yajl::HttpStream.get(uri) do |data|
       puts data.inspect
 
-      @channel.push JSON.generate(data);
+      @channel.push Yajl::Encoder.encode(data);
     end
   }
 }
